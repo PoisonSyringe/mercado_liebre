@@ -23,8 +23,11 @@
                     <img src="/images/logo-mercado-liebre.svg" alt="">
                 </div>
                 <div class="search-bar">
-                    <input class="search-input" type="text" placeholder=" Buscar productos, marcas y más">
-                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form>
+                        <input class="search-input" type="text" placeholder=" Buscar productos, marcas y más">
+                        <button class="search-button" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
                 </div>
             </div>
             <div class="topSection__texto">
@@ -65,16 +68,34 @@
                     </label>
                     <input type="file" id="fileUpload" name="fileUpload" accept="image/*">
                     <input type="submit" value="Upload Image">
-                    <input type="text" name="name" id="name" placeholder="Nombre y apellido">
-                    <input type="text" name="username" id="username" placeholder="Nombre de usuario">
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
-                    <input type="password" name="password" id="password" placeholder="Confirmar contraseña">
+
+                    <input class="name" type="text" name="name" id="name" placeholder="Nombre y apellido"
+                        pattern="(?=.*[a-z]|[A-Z]).{4,16}">
+                    <span class="error-name" id="name">Minimo 4 letras y maximo 16</span>
+
+                    <input class="username" type="text" name="username" id="username" placeholder="Nombre de usuario"
+                        pattern="(?=.*[a-z]|[A-Z]).{6,16}">
+                    <span class="error-username" id="username">Minimo 6 letras y maximo 16</span>
+
+                    <input class="pass1" type="password" name="password" id="password" placeholder="Contraseña"
+                        pattern="(?=.*\d)(?=.*[a-z]|[A-Z]).{8,}">
+                    <span class="error-pass1" id="pass1">Debe contener almenos una letra, un numero y minimo de 8
+                        caracteres</span>
+
+                    <input class="pass2" type="password" name="password" id="password"
+                        placeholder="Confirmar contraseña" pattern="(?=.*\d)(?=.*[a-z]|[A-Z]).{8,}">
+                    <span class="error-pass2" id="pass2">"Debe ser igual a la contraseña" (coming soon)</span>
+
                     <input type="email" name="email" id="email" placeholder="E-mail">
+                    <span class="error-address" id="email">Debe ser un email valido</span>
+
                     <label for="date">
                         <h3>Fecha de Nacimiento</h3>
                     </label>
                     <input type="date" name="birth-date" id="birth-date">
+
                     <input type="text" name="address" id="address" placeholder="Domicilio">
+                    <span class="error-username" id="username">Este campo es obligatorio</span>
                 </div>
                 <div class="form__field--radios">
                     <label>
@@ -113,7 +134,7 @@
                     </div>
                 </div>
                 <div class="form__field--end-buttons">
-                    <input type="button" value="Registrarse" onclick="goHome()">
+                    <input type="submit" value="Registrarse" onclick="goHome()">
                     <input type="reset" value="Borrar datos">
                 </div>
             </form>

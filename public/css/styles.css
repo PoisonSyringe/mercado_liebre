@@ -50,6 +50,11 @@ article {
     padding: 5px;
 }
 
+.search-bar form {
+    display: flex;
+    width: 100%;
+}
+
 .search-input {
     border: none;
     height: 30px;
@@ -79,10 +84,12 @@ article {
 }
 
 .precios {
+    width: 50%;
     font-size: 18px;
 }
 
 .descuento {
+    width: 50%;
     font-size: 16px;
     color: rgb(31, 196, 31);
 }
@@ -164,6 +171,8 @@ article:hover .logo {
 }
 
 .products__info {
+    display: flex;
+    flex-wrap: wrap;
     border-top: solid 1px #ebebeb;
     padding: 15px;
     line-height: 5px;
