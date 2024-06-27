@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="Es-ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/registerStyles.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <header>
+        <div class="topSection">
+            <div class="topSection__logo-search">
+                <div class="logo-mercado-liebre">
+                    <img src="/images/logo-mercado-liebre.svg" alt="">
+                </div>
+                <div class="search-bar">
+                    <input class="search-input" type="text" placeholder=" Buscar productos, marcas y más">
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="topSection__texto">
+                <p class="p__topMessage"><i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin
+                    tarjeta
+                    de
+                    crédito</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="topList">
+                <div>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Tiendas Oficiales</a></li>
+                    <li><a href="">Vender</a></li>
+                    <li><a href="">Ayuda</a></li>
+                </div>
+                <div>
+                    <li><a href="/views/register.html">Creá tu cuenta </a><i class="fa-regular fa-id-card"></i></li>
+                    <li><a href="/views/login.html">Ingresá </a><i class="fa-solid fa-right-to-bracket"></i></li>
+                    <li><a href="">Mis compras </a><i class="fa-solid fa-basket-shopping"></i></li>
+                </div>
+            </ul>
+        </nav>
+        <div class="burger-positioner">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="form">
+            <form class="form__field">
+                <div class="form__field--user-data">
+                    <label for="fileUpload">
+                        <h3>Seleccionar imagen de perfil</h3>
+                    </label>
+                    <input type="file" id="fileUpload" name="fileUpload" accept="image/*">
+                    <input type="submit" value="Upload Image">
+                    <input type="text" name="name" id="name" placeholder="Nombre y apellido">
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <input type="password" name="password" id="password" placeholder="Confirmar contraseña">
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <label for="date">
+                        <h3>Fecha de Nacimiento</h3>
+                    </label>
+                    <input type="date" name="birth-date" id="birth-date">
+                    <input type="text" name="address" id="address" placeholder="Domicilio">
+                </div>
+                <div class="form__field--radios">
+                    <label>
+                        <h3>Perfil de usuario</h3>
+                    </label>
+                    <div class="form__field--radios__boxes">
+                        <input type="radio" name="option" id="radio1">
+                        <label for="radio1">Comprador</label>
+                        <input type="radio" name="option" id="radio2">
+                        <label for="radio2">Vendedor</label>
+                    </div>
+                </div>
+                <div class="form__field--checks">
+                    <label>
+                        <h3>Intereses</h3>
+                    </label>
+                    <div class="form__field--checks__boxes">
+                        <input type="checkbox" name="check1" id="check1">
+                        <label for="check1">Electro</label>
+                    </div>
+                    <div class="form__field--checks__boxes">
+                        <input type="checkbox" name="check2" id="check2">
+                        <label for="check2">Moda</label>
+                    </div>
+                    <div class="form__field--checks__boxes">
+                        <input type="checkbox" name="check3" id="check3">
+                        <label for="check3">Hogar</label>
+                    </div>
+                    <div class="form__field--checks__boxes">
+                        <input type="checkbox" name="check4" id="check4">
+                        <label for="check4">Jugueteria</label>
+                    </div>
+                    <div class="form__field--checks__boxes">
+                        <input type="checkbox" name="check5" id="check5">
+                        <label for="check5">Vida sana</label>
+                    </div>
+                </div>
+                <div class="form__field--end-buttons">
+                    <input type="button" value="Registrarse" onclick="goHome()">
+                    <input type="reset" value="Borrar datos">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        function goHome() {
+            window.location.href = "/views/home.html";
+        }
+    </script>
+</body>
+
+</html>

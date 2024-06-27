@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/registerStyles.css">
+    <title>Ingreso</title>
+</head>
+
+<body>
+    <header>
+        <div class="topSection">
+            <div class="topSection__logo-search">
+                <div class="logo-mercado-liebre">
+                    <img src="/images/logo-mercado-liebre.svg" alt="">
+                </div>
+                <div class="search-bar">
+                    <input class="search-input" type="text" placeholder=" Buscar productos, marcas y más">
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="topSection__texto">
+                <p class="p__topMessage"><i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin
+                    tarjeta
+                    de
+                    crédito</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="topList">
+                <div>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Tiendas Oficiales</a></li>
+                    <li><a href="">Vender</a></li>
+                    <li><a href="">Ayuda</a></li>
+                </div>
+                <div>
+                    <li><a href="/views/register.html">Creá tu cuenta </a><i class="fa-regular fa-id-card"></i></li>
+                    <li><a href="/views/login.html">Ingresá </a><i class="fa-solid fa-right-to-bracket"></i></li>
+                    <li><a href="">Mis compras </a><i class="fa-solid fa-basket-shopping"></i></li>
+                </div>
+            </ul>
+        </nav>
+        <div class="burger-positioner">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="form">
+            <form class="form__field">
+                <p>Ingrese sus datos</p>
+                <div class="form__field--user-data">
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                </div>
+                <div class="form__field--end-buttons">
+                    <input type="button" name="confirm" id="confirm" value="Registrarse" onclick="goHome()">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        function goHome() {
+            window.location.href = "/views/home.html";
+        }
+    </script>
+</body>
+
+</html>
